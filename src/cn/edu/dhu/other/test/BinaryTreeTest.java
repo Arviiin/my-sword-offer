@@ -1,9 +1,9 @@
-package cn.edu.dhu.OtherAlgorithmImplement.test;
+package cn.edu.dhu.other.test;
 
-import cn.edu.dhu.basedatastruct.TreeNode;
+import cn.edu.dhu.datastruct.TreeNode;
 import org.junit.Test;
 
-import static cn.edu.dhu.OtherAlgorithmImplement.BinaryTree.*;
+import static cn.edu.dhu.other.BinaryTree.*;
 
 public class BinaryTreeTest {
 

@@ -1,4 +1,4 @@
-package cn.edu.dhu.basedatastruct;
+package cn.edu.dhu.datastruct;
 
 public class ListNode {
     public int val;

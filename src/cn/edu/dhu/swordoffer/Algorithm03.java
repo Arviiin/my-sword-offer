@@ -1,4 +1,4 @@
-package cn.edu.dhu.my;
+package cn.edu.dhu.swordoffer;
 
 /**
  * 输入一个链表，从尾到头打印链表每个节点的值。
@@ -17,7 +17,7 @@ package cn.edu.dhu.my;
  *
  */
 
-import cn.edu.dhu.basedatastruct.ListNode;
+import cn.edu.dhu.datastruct.ListNode;
 
 import java.util.ArrayList;
 import java.util.Scanner;

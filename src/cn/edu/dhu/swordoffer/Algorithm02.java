@@ -1,4 +1,4 @@
-package cn.edu.dhu.my;
+package cn.edu.dhu.swordoffer;
 
 public class Algorithm02 {
     /**

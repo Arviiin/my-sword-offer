@@ -1,8 +1,7 @@
-package cn.edu.dhu.OtherAlgorithmImplement;
+package cn.edu.dhu.other;
 
-import cn.edu.dhu.basedatastruct.TreeNode;
+import cn.edu.dhu.datastruct.TreeNode;
 
-import java.util.Scanner;
 import java.util.Stack;
 
 /**

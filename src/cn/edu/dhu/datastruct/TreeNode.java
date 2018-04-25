@@ -1,4 +1,4 @@
-package cn.edu.dhu.basedatastruct;
+package cn.edu.dhu.datastruct;
 
 /**
  * 建立一个二叉树类（采用二叉链表）
