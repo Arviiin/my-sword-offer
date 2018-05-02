@@ -44,11 +44,11 @@ public class Algorithm03 {
     public static void main(String[] args) {
         ListNode nodelist = GenNodeList();
         ArrayList<Integer> arrayList = printListFromTailToHead(nodelist);
-            System.out.println(arrayList);
-            /*System.out.println(node.val + "");
-            while(node.hasListNext()) {
-                node = node.next;
-                System.out.println(node.val + " ");
-            }*/
+        System.out.println(arrayList);
+        /*System.out.println(node.val + "");
+        while(node.hasListNext()) {
+            node = node.next;
+            System.out.println(node.val + " ");
+        }*/
         }
 }

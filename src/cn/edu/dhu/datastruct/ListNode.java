@@ -19,29 +19,28 @@ public class ListNode {
         this.val = val;
     }
 
-    public void add(ListNode node) {
-        this.next = node;
-    }
-
     public boolean hasListNext() {
         return this.next == null ? false : true;
     }
 
+    /**
+     * 没有空数据域的头结点。每个节点都有数字。
+     * @return
+     */
     public static ListNode GenNodeList(){
 
         ListNode first = null; //记录第一个节点，在后面遍历的时候使用
-        ListNode node = null; //保存当前输入的节点使用
+        ListNode node = null;  //保存当前输入的节点使用
         Scanner sc = new Scanner(System.in);
 
-        while (!sc.hasNext("0")) {//hasnext()方法会死循环因此需要设置一个结束标志，我也不太清楚。！sc.hasNext("0").也就是说以0结束
-            //int2--;
+        while (!sc.hasNext("0")) {//hasNext()方法会死循环因此需要设置一个结束标志，我也不太清楚。！sc.hasNext("0").也就是说以0结束
             int v = sc.nextInt();
             ListNode n = new ListNode(v);
             if (first == null) {
                 first = n;
                 node = n;
             } else {
-                node.add(n);
+                node.next = n;
                 node = n;
             }
         }
@@ -50,7 +49,6 @@ public class ListNode {
             System.out.println("没有数字输入");
         } else {
             node = first;
-
             /*System.out.println(node.val + "");
             while(node.hasListNext()) {
                 node = node.next;
