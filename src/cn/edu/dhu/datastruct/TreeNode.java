@@ -1,4 +1,14 @@
 package cn.edu.dhu.datastruct;
+/**
+ public class TreeNode {
+    int val = 0;
+    TreeNode left = null;
+    TreeNode right = null;
+    public TreeNode(int val) {
+         this.val = val;
+    }
+ }
+ */
 
 /**
  * 建立一个二叉树类（采用二叉链表）
