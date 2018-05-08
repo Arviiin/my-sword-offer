@@ -1,4 +1,4 @@
-package cn.edu.dhu.swordoffer;
+package cn.edu.dhu.swordoffer.package1_20;
 
 /**
  * 输入一个链表，从尾到头打印链表每个节点的值。

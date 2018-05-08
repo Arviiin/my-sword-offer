@@ -1,9 +1,8 @@
-package cn.edu.dhu.swordoffer;
+package cn.edu.dhu.swordoffer.package1_20;
 
 import cn.edu.dhu.datastruct.ListNode;
 
 import static cn.edu.dhu.datastruct.ListNode.GenNodeList;
-import static cn.edu.dhu.swordoffer.Algorithm14FindKthToTail.FindKthToTail;
 
 /**
  *输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。
