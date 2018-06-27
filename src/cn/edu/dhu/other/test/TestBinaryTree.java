@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static cn.edu.dhu.other.BinaryTree.*;
 
-public class BinaryTreeTest {
+public class TestBinaryTree {
 
     static int counter = 0;//定义一个静态计数变量
     @Test
