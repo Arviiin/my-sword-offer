@@ -45,8 +45,6 @@ public class Algorithm41FindContinuousSequence {
         }
         return ans;
     }
-
-
     public static void main(String[] args) {
         Algorithm41FindContinuousSequence obj = new Algorithm41FindContinuousSequence();
         ArrayList<ArrayList<Integer>> result = obj.FindContinuousSequence(100);
