@@ -8,7 +8,7 @@ package cn.edu.dhu.swordoffer.package41_50;
  */
 public class Algorithm46LastRemaining {
 
-    //用数组来模拟环，思路还是比较简单，但是各种下标要理清
+    //用数组来模拟环，思路还是比较简单，但是各种下标要理清   如果m很大，这个思路就很浪费时间，其实m很多的时候，等效于m =m%n
     public int LastRemaining_Solution(int n, int m) {//测试用例:5,2.对应输出应该为:2
         if (n == 0 || m == 0) return -1;//对传入参数进行判断
         int[] array = new int[n];//创建一个数组来模拟环,初始状态每个元素均为0,若出列唱完歌则将相应位置置为1
