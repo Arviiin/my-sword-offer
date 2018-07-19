@@ -1,7 +1,5 @@
 package cn.edu.dhu.swordoffer.package51_60;
-import cn.edu.dhu.datastruct.ListNode;
 import cn.edu.dhu.datastruct.TreeNode;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -18,6 +16,8 @@ public class TreeNode {
 */
 /**
  * 从上到下按层打印二叉树，同一层结点从左至右输出。每一层输出一行。
+ *
+ * 思路:使用层次遍历,用队列.根出队,判断左右孩子是否为空,不空则入其左右孩子
  */
 public class Algorithm60Print2 {
     ArrayList<ArrayList<Integer> > Print(TreeNode pRoot) {
