@@ -1,4 +1,5 @@
 package cn.edu.dhu.swordoffer.package41_50;
+
 import java.util.ArrayList;
 
 /**
@@ -9,15 +10,15 @@ import java.util.ArrayList;
  */
 public class Algorithm43LeftRotateString {
 
-    public String LeftRotateString(String str,int n) {
+    public String LeftRotateString(String str, int n) {
 
 
         //思路,先补成两个字符串长度,再截取
         int len = str.length();
-        if(len == 0) return "";
+        if (len == 0) return "";
         n = n % len;
         str += str;
-        return str.substring(n, len+n);
+        return str.substring(n, len + n);
 
         /*//保证旋转的位数大于字符串的长度，否则返回空字符串
         if(n>str.length())
@@ -40,10 +41,11 @@ public class Algorithm43LeftRotateString {
         }
         return sb.toString();*/
     }
+
     public static void main(String[] args) {
         String string = "abcXYZdef";
         Algorithm43LeftRotateString obj = new Algorithm43LeftRotateString();
-        String result = obj.LeftRotateString(string,3);
+        String result = obj.LeftRotateString(string, 3);
         System.out.println(result);
     }
 }

@@ -1,4 +1,5 @@
 package cn.edu.dhu.swordoffer.package21_40;
+
 /**
  * 统计一个数字在排序数组中出现的次数。
  * 测试用例:
@@ -11,6 +12,7 @@ public class Algorithm37GetNumberOfK {
     public int GetNumberOfK(int[] array, int k) {
         return biSearch(array, k + 0.5) - biSearch(array, k - 0.5);
     }
+
     public int biSearch(int[] array, double num) {
         int s = 0, e = array.length - 1;
         while (s <= e) {
@@ -22,6 +24,7 @@ public class Algorithm37GetNumberOfK {
         }
         return s;
     }
+
     /*笨写法
     public int GetNumberOfK(int [] array , int k) {
         int count = 0;

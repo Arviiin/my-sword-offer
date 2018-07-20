@@ -10,10 +10,10 @@ package cn.edu.dhu.swordoffer.package41_50;
  * 示例1
  * 输入
  * +2147483647
- *     1a33
+ * 1a33
  * 输出
  * 2147483647
- *     0
+ * 0
  */
 public class Algorithm49StrToInt {
     //思路,既然不能用字符串转整数,那么想到用ascii码相减的方式获取数值
@@ -21,25 +21,25 @@ public class Algorithm49StrToInt {
         if ("".equals(str.trim()))
             return 0;
         int flag = 1;
-        if (str.startsWith("-")){
+        if (str.startsWith("-")) {
             flag = -1;
         }
         String substring;
-        if (str.startsWith("+") || str.startsWith("-")){
+        if (str.startsWith("+") || str.startsWith("-")) {
             substring = str.substring(1);
-        }else {
+        } else {
             substring = str;
         }
 
         char[] strChars = substring.toCharArray();
         int length = strChars.length;
         int result = 0;
-        for (int i = 0; i < length ; i++) {
+        for (int i = 0; i < length; i++) {
             if (strChars[i] < 48 || strChars[i] > 57)
                 return 0;
             result = result * 10 + strChars[i] - 48;
         }
-        return flag*result;
+        return flag * result;
     }
 
     public static void main(String[] args) {

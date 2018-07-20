@@ -40,7 +40,7 @@ public class Algorithm26Convert {
         List binaryTree = creatBinaryTree(datas);
         TreeNode pRootOfTree = (TreeNode) binaryTree.get(0);
         TreeNode realHead = Convert(pRootOfTree);
-        while (realHead != null){
+        while (realHead != null) {
             System.out.print(realHead.val + "\t");
             realHead = realHead.right;
 

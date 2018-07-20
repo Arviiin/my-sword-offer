@@ -1,9 +1,10 @@
 package cn.edu.dhu.swordoffer.package51_60;
 
 import cn.edu.dhu.datastruct.ListNode;
+
 /**
  * 给一个链表，若其中包含环，请找出该链表的环的入口结点，否则，输出null。
- *
+ * <p>
  * 第一步，找环中相汇点。分别用p1，p2指向链表头部，p1每次走一步，p2每次走二步，直到p1==p2找到在环中的相汇点。
  * 第二步，找环的入口。接上步，当p1==p2时，p2所经过节点数为2x,p1所经过节点数为x,设环中有n个节点,p2比p1多走一圈(也可能是多圈,并不影响结果)
  * 有2x=n+x;
@@ -11,20 +12,20 @@ import cn.edu.dhu.datastruct.ListNode;
  */
 public class Algorithm55EntryNodeOfLoop {
     public ListNode EntryNodeOfLoop(ListNode pHead) {
-        if(pHead == null || pHead.next == null)
+        if (pHead == null || pHead.next == null)
             return null;
         ListNode p1 = pHead;
         ListNode p2 = pHead;
-        while(p2 != null && p2.next != null ){
+        while (p2 != null && p2.next != null) {
             p1 = p1.next;
             p2 = p2.next.next;
-            if(p1 == p2){
+            if (p1 == p2) {
                 p2 = pHead;
-                while(p1 != p2){
+                while (p1 != p2) {
                     p1 = p1.next;
                     p2 = p2.next;
                 }
-                if(p1 == p2)
+                if (p1 == p2)
                     return p1;
             }
         }

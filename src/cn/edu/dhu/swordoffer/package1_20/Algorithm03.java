@@ -2,6 +2,15 @@ package cn.edu.dhu.swordoffer.package1_20;
 
 /**
  * 输入一个链表，从尾到头打印链表每个节点的值。
+ * <p>
+ * public class ListNode {
+ * int val;
+ * ListNode next = null;
+ * <p>
+ * ListNode(int val) {
+ * this.val = val;
+ * }
+ * }
  */
 
 //数据结构定义如下
@@ -29,13 +38,13 @@ import static cn.edu.dhu.datastruct.ListNode.GenNodeList;
 public class Algorithm03 {
     public static ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
         Stack<Integer> stack = new Stack<>();
-        while(listNode != null){
+        while (listNode != null) {
             stack.push(listNode.val);
             listNode = listNode.next;
         }
 
         ArrayList<Integer> arrayList = new ArrayList<Integer>();
-        while (!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             arrayList.add(stack.pop());
         }
         return arrayList;
@@ -50,5 +59,5 @@ public class Algorithm03 {
             node = node.next;
             System.out.println(node.val + " ");
         }*/
-        }
+    }
 }

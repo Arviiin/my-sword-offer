@@ -6,22 +6,23 @@ package cn.edu.dhu.swordoffer.package1_20;
  */
 public class Algorithm07Fibonacci {
     public static int Fibonacci(int n) {
-        if(n == 1 || n == 2){
+        if (n == 1 || n == 2) {
             return 1;
         }
         int a = 1;
         int b = 1;
         int temp = 0;
-        while(n > 2){
-            temp = a+b;
+        while (n > 2) {
+            temp = a + b;
             a = b;
             b = temp;
-            n -- ;
+            n--;
         }
         return temp;
     }
-    public static void main(String [] args){
-        int n =5;
+
+    public static void main(String[] args) {
+        int n = 5;
         System.out.print(Fibonacci(n));
     }
 }

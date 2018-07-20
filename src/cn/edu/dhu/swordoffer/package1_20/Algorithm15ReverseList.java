@@ -10,16 +10,16 @@ import static cn.edu.dhu.datastruct.ListNode.GenNodeList;
 //思路：利用指针p ,q ，head，用p来在断掉链表之前保存后面的数据
 public class Algorithm15ReverseList {
     public static ListNode ReverseList(ListNode head) {
-        if(head == null){
+        if (head == null) {
             return null;
-        }else if(head.next == null){
+        } else if (head.next == null) {
             return head;
-        }else {
+        } else {
             ListNode p = null;
             ListNode q = null;
             p = head.next;
-            head.next= q;//将原本头结点的next域置为空
-            while(p != null){
+            head.next = q;//将原本头结点的next域置为空
+            while (p != null) {
                 q = p;
                 p = p.next;
                 q.next = head;

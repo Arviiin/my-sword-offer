@@ -9,15 +9,15 @@ import java.util.Queue;
 
 /**
  * 输入一棵二叉树，判断该二叉树是否是平衡二叉树
- *
+ * <p>
  * 这里有一点需要注意,平和二叉树的基础是它是一颗二叉排序树,因为避免单支情况退化为链表.故提出平衡二叉树,
  * 即:每个结点的左右子树的高度之差的绝对值（平衡因子）最多为1。
- *
+ * <p>
  * 以下代码不考虑判定是否为二叉排序树,默认符合,主要判定:是否每个结点的左右子树的高度之差的绝对值（平衡因子）最多为1
  */
 public class Algorithm39IsBalancedBinTree {
 
-//    从下往上遍历，如果子树是平衡二叉树，则返回子树的高度；如果发现子树不是平衡二叉树，则直接停止遍历，这样至多只对每个结点访问一次。
+    //    从下往上遍历，如果子树是平衡二叉树，则返回子树的高度；如果发现子树不是平衡二叉树，则直接停止遍历，这样至多只对每个结点访问一次。
     //-1即是:不满足
     public boolean IsBalanced_Solution(TreeNode root) {
         return getDepth(root) != -1;
@@ -34,7 +34,7 @@ public class Algorithm39IsBalancedBinTree {
 
 
     public static void main(String[] args) {
-        Integer[] datas = new Integer[]{1,2,3,4,5,null,null,null,null,6};//当设计到有null的时候可以使用包装类
+        Integer[] datas = new Integer[]{1, 2, 3, 4, 5, null, null, null, null, 6};//当设计到有null的时候可以使用包装类
         List nodeList = TreeNode.creatBinaryTree(datas);
         TreeNode root = (TreeNode) nodeList.get(0);
         Algorithm39IsBalancedBinTree obj = new Algorithm39IsBalancedBinTree();

@@ -1,4 +1,5 @@
 package cn.edu.dhu.swordoffer.package51_60;
+
 /**
  * 请实现一个函数用来匹配包括'.'和'*'的正则表达式。模式中的字符'.'表示任意一个字符，
  * 而'*'表示它前面的字符可以出现任意次（包含0次）。
@@ -15,7 +16,7 @@ public class Algorithm52Match {
         return matchCore(str, strIndex, pattern, patternIndex);
     }
 
-     private boolean matchCore(char[] str, int strIndex, char[] pattern, int patternIndex) {
+    private boolean matchCore(char[] str, int strIndex, char[] pattern, int patternIndex) {
         //有效性检验：str到尾，pattern到尾，匹配成功
         if (strIndex == str.length && patternIndex == pattern.length) {
             return true;
@@ -44,7 +45,7 @@ public class Algorithm52Match {
     public static void main(String[] args) {
         Algorithm52Match obj = new Algorithm52Match();
         //字符串"aaa"与模式"a.a"和"ab*ac*a"匹配，但是与"aa.a"和"ab*a"均不匹配
-        boolean result = obj.match("aaa".toCharArray(),"a.a".toCharArray());
+        boolean result = obj.match("aaa".toCharArray(), "a.a".toCharArray());
         System.out.println(result);
     }
 }

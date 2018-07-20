@@ -1,4 +1,5 @@
 package cn.edu.dhu.swordoffer.package1_20;
+
 /**
  * 一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
  * 关于本题，前提是n个台阶会有一次n阶的跳法。分析如下:
@@ -16,7 +17,7 @@ package cn.edu.dhu.swordoffer.package1_20;
  *     因此结论是f(3) = f(3-1)+f(3-2)+f(3-3)
  * 5) n = n时，会有n中跳的方式，1阶、2阶...n阶，得出结论：
  *     f(n) = f(n-1)+f(n-2)+...+f(n-(n-1)) + f(n-n) = f(n-1)+f(n-2)+...+ f(1) + f(0)
- *     即：f(n) = f(n-1)+f(n-2)+...+ f(1) + f(0)  <1>
+ * 即：f(n) = f(n-1)+f(n-2)+...+ f(1) + f(0)  <1>
  * 6) 由以上已经是一种结论，但是为了简单，我们可以继续简化(把n-1代入上式中的n可以得到)：
  *     f(n-1) = f(n-2)+f(n-3) + ... + f(1) +f(0)  <2>
  *     <1><2>合并可以得出：
@@ -34,8 +35,8 @@ public class Algorithm09JumpFloorII {
         }
     }
 
-    public static void main(String [] args){
-        int n =2;
+    public static void main(String[] args) {
+        int n = 2;
         System.out.print(JumpFloorII(n));
     }
 }

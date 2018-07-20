@@ -1,9 +1,10 @@
 package cn.edu.dhu.swordoffer.package21_40;
+
 /**
- *求出1~13的整数中1出现的次数,并算出100~1300的整数中1出现的次数？
+ * 求出1~13的整数中1出现的次数,并算出100~1300的整数中1出现的次数？
  * 为此他特别数了一下1~13中包含1的数字有1、10、11、12、13因此共出现6次,但是对于后面问题他就没辙了。
  * ACMer希望你们帮帮他,并把问题更加普遍化,可以很快的求出任意非负整数区间中1出现的次数。
- *
+ * <p>
  * 按照题目给的代码，实际上这一题就是问你从1到n有多少个1。。。题目越来越变态了。
  */
 
@@ -21,26 +22,27 @@ public class Algorithm31NumberOf1Between1AndN {
     public int NumberOf1Between1AndN_Solution(int n) {
         int count = 0;//1的个数
         int i = 1;//当前位
-        int current = 0,low = 0,high = 0;
-        while((n/i)!= 0){           
-            current = (n/i)%10; //当前位数字
-            high = n/(i*10); //高位数字
-            low = n-(n/i)*i; //低位数字
+        int current = 0, low = 0, high = 0;
+        while ((n / i) != 0) {
+            current = (n / i) % 10; //当前位数字
+            high = n / (i * 10); //高位数字
+            low = n - (n / i) * i; //低位数字
             //如果为0,出现1的次数由高位决定,等于高位数字 * 当前位数
             if (current == 0)
-                count += high*i;
-            //如果为1,出现1的次数由高位和低位决定,高位*当前位+低位+1
-            else if(current == 1)
+                count += high * i;
+                //如果为1,出现1的次数由高位和低位决定,高位*当前位+低位+1
+            else if (current == 1)
                 count += high * i + low + 1;
-            //如果大于1,出现1的次数由高位决定,//（高位数字+1）* 当前位数
-            else{
+                //如果大于1,出现1的次数由高位决定,//（高位数字+1）* 当前位数
+            else {
                 count += (high + 1) * i;
-            }    
+            }
             //前移一位
-            i = i*10;
+            i = i * 10;
         }
         return count;
     }
+
     public static void main(String[] args) {
         Algorithm31NumberOf1Between1AndN a = new Algorithm31NumberOf1Between1AndN();
         int sumMax = a.NumberOf1Between1AndN_Solution(12113);

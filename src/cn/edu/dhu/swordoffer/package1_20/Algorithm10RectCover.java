@@ -17,17 +17,17 @@ package cn.edu.dhu.swordoffer.package1_20;
                因为，摆放了一块1*2的小矩阵，对应下方的1*2摆放方法就确定了，所以为f(targte-2)*/
 public class Algorithm10RectCover {
     public static int RectCover(int target) {
-        if(target<=0){
+        if (target <= 0) {
             return 0;
-        }else if(target<=2){
+        } else if (target <= 2) {
             return target;
-        }else{
-            return RectCover(target-1)+RectCover(target-2);
+        } else {
+            return RectCover(target - 1) + RectCover(target - 2);
         }
     }
 
-    public static void main(String [] args){
-        int n =7;
+    public static void main(String[] args) {
+        int n = 7;
         System.out.print(RectCover(n));
     }
 }

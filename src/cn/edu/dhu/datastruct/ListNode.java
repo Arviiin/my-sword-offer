@@ -15,6 +15,7 @@ public class ListNode {
 public class ListNode {
     public int val;
     public ListNode next = null;
+
     public ListNode(int val) {
         this.val = val;
     }
@@ -25,9 +26,10 @@ public class ListNode {
 
     /**
      * 没有空数据域的头结点。每个节点都有数字。
+     *
      * @return
      */
-    public static ListNode GenNodeList(){
+    public static ListNode GenNodeList() {
 
         ListNode first = null; //记录第一个节点，在后面遍历的时候使用
         ListNode node = null;  //保存当前输入的节点使用
@@ -45,7 +47,7 @@ public class ListNode {
             }
         }
 
-        if(first == null) {
+        if (first == null) {
             System.out.println("没有数字输入");
         } else {
             node = first;

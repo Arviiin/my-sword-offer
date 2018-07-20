@@ -8,9 +8,9 @@ public class Algorithm02 {
     public static String replaceSpace(StringBuffer str) {
 
         int index = str.indexOf(" ");
-        while(index != -1){
-            str.replace(index,index+1,"%20");
-            index = str.indexOf(" ",index);
+        while (index != -1) {
+            str.replace(index, index + 1, "%20");
+            index = str.indexOf(" ", index);
         }
         String result = str.toString();
         return result;

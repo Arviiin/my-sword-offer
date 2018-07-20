@@ -1,7 +1,7 @@
 package cn.edu.dhu.swordoffer.package21_40;
 
 /**
- *一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字。
+ * 一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字。
  */
 /*考虑过程：
  首先我们考虑这个问题的一个简单版本：一个数组里除了一个数字之外，其他的数字都出现了两次。
@@ -18,27 +18,27 @@ public class Algorithm40FindNumsAppearOnce {
 
     //num1,num2分别为长度为1的数组。传出参数
     //将num1[0],num2[0]设置为返回结果
-    public void FindNumsAppearOnce(int [] array,int num1[] , int num2[]) {
-        if(array.length < 2) return ;
+    public void FindNumsAppearOnce(int[] array, int num1[], int num2[]) {
+        if (array.length < 2) return;
         int myxor = 0;
         int flag = 1;
-        for(int i = 0 ; i < array.length; ++ i )
+        for (int i = 0; i < array.length; ++i)
             myxor ^= array[i];
-        while((myxor & flag) == 0) flag <<= 1;
+        while ((myxor & flag) == 0) flag <<= 1;
         // num1[0] = myxor;
         //num2[0] = myxor;
-        for(int i = 0; i < array.length; ++ i ){
-            if((flag & array[i]) == 0) num2[0]^= array[i];
-            else num1[0]^= array[i];
+        for (int i = 0; i < array.length; ++i) {
+            if ((flag & array[i]) == 0) num2[0] ^= array[i];
+            else num1[0] ^= array[i];
         }
     }
 
 
     public static void main(String[] args) {
-        int[] datas = new int[]{2,4,3,6,3,2,5,5};
+        int[] datas = new int[]{2, 4, 3, 6, 3, 2, 5, 5};
         int[] num1 = new int[1];
         int[] num2 = new int[1];
         Algorithm40FindNumsAppearOnce obj = new Algorithm40FindNumsAppearOnce();
-        obj.FindNumsAppearOnce(datas,num1,num2);
+        obj.FindNumsAppearOnce(datas, num1, num2);
     }
 }

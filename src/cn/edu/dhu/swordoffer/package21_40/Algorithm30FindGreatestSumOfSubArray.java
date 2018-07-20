@@ -5,13 +5,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *HZ偶尔会拿些专业问题来忽悠那些非计算机专业的同学。
+ * HZ偶尔会拿些专业问题来忽悠那些非计算机专业的同学。
  * 今天测试组开完会后,他又发话了:在古老的一维模式识别中,常常需要计算连续子向量的最大和,
  * 当向量全为正数的时候,问题很好解决。
  * 但是,如果向量中包含负数,是否应该包含某个负数,并期望旁边的正数会弥补它呢？
  * 例如:{6,-3,-2,7,-15,1,2,2},连续子向量的最大和为8(从第0个开始,到第3个为止)。
  * 你会不会被他忽悠住？(子向量的长度至少是1)
- *
+ * <p>
  * 这个题目其实就是从数组中找到连续和最大的子数组。就喜欢忽悠，玛德。
  */
 
@@ -49,14 +49,14 @@ public class Algorithm30FindGreatestSumOfSubArray {
         int allSubArrayMax = array[0];//注意初始值 不能设为0 防止只有负数
         for (int i = 1; i < array.length; i++) { //从1开始 因为0的情况在初始化时完成了
             //如果当前子数组的和还没有当前子数组的最后一个数大就不要前面的子数组，从当前子数组的最后一个元素作为新的数组起始。
-            curSubArrayMax = Math.max(curSubArrayMax + array[i],array[i]);
+            curSubArrayMax = Math.max(curSubArrayMax + array[i], array[i]);
             allSubArrayMax = Math.max(curSubArrayMax, allSubArrayMax);
         }
         return allSubArrayMax;
     }
 
     public static void main(String[] args) {
-        int[] array = new int[]{1,-2,3,10,-4,7,2,-5};
+        int[] array = new int[]{1, -2, 3, 10, -4, 7, 2, -5};
 //        int[] array = new int[]{6,-3,-2,7,-15,1,2,2};
         Algorithm30FindGreatestSumOfSubArray a = new Algorithm30FindGreatestSumOfSubArray();
         int sumMax = a.FindGreatestSumOfSubArray(array);

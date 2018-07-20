@@ -9,7 +9,6 @@ import cn.edu.dhu.datastruct.RandomListNode;
  */
 public class Algorithm25Clone {
     /**
-     *
      * @param pHead
      * @return RandomListNode
      * 思路先从前往后复制next，再从前往后复制random域。然后再拆分链表

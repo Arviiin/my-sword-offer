@@ -1,4 +1,5 @@
 package cn.edu.dhu.swordoffer.package21_40;
+
 import cn.edu.dhu.datastruct.TreeNode;
 
 import java.util.*;
@@ -13,7 +14,7 @@ public class Algorithm22TreePrintFromTopToBottom {
 
     public static ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<Integer>();
-        if(root==null){
+        if (root == null) {
             return list;
         }
         //最佳实践：面向接口编程，而不是面向实现编程

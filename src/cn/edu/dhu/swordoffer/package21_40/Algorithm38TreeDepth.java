@@ -30,7 +30,7 @@ public class Algorithm38TreeDepth {
                 queue.add(top.right);
             }
             if (count == nextCount) {//这里用来比对，来判断进行到哪一层。最初nextCount赋值为1，是因为根节点只有一个，
-                                     // 然后每出队则记一次count（在每层开始处清0），nextCount实际上就是每层的节点数，这样一比对就可以判断一层遍历完。层数加1
+                // 然后每出队则记一次count（在每层开始处清0），nextCount实际上就是每层的节点数，这样一比对就可以判断一层遍历完。层数加1
                 nextCount = queue.size();
                 count = 0;
                 depth++;

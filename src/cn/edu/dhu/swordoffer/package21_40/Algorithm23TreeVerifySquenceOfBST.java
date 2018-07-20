@@ -18,7 +18,7 @@ public class Algorithm23TreeVerifySquenceOfBST {
         if (sequence.length == 0) {
             return false;
         }
-        if (sequence.length == 1){
+        if (sequence.length == 1) {
             return true;
         }
         boolean flag = isBST(sequence, 0, sequence.length - 1);
@@ -31,7 +31,8 @@ public class Algorithm23TreeVerifySquenceOfBST {
      * 对于后序遍历来说，序列数组的最后一个元素一定是根节点,
      * 则根据这个元素，将前面的数组分为左、右两个部分，左侧部分都小，右侧部分都大，
      * 如果右侧部分有比该根节点小的元素，那么就不是后序遍历,如此递归进行
-     *         和快速排序有点像
+     * 和快速排序有点像
+     *
      * @param arr
      * @param start
      * @param end
@@ -40,7 +41,7 @@ public class Algorithm23TreeVerifySquenceOfBST {
     public static boolean isBST(int[] arr, int start, int end) {
         //遍历完数组的一部分，没报错，返回true
         if (start >= end) { //这个=号很重要，有了以后可以减少递归运算次数
-                            // 比如当分割的序列最后只有第一个元素时，其实开始是0结束也是0从这里便可以结束调用
+            // 比如当分割的序列最后只有第一个元素时，其实开始是0结束也是0从这里便可以结束调用
             return true;
         }
         // 当前数组(从start到end部分)的根节点

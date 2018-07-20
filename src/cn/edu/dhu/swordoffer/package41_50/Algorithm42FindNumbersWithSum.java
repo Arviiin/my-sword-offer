@@ -1,16 +1,18 @@
 package cn.edu.dhu.swordoffer.package41_50;
+
 import java.util.ArrayList;
+
 /**
  * 题目描述
  * 输入一个递增排序的数组和一个数字S，在数组中查找两个数，使得他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。
  * 输出描述:
  * 对应每个测试案例，输出两个数，小的先输出。
- *
+ * <p>
  * 思路:不用考虑乘积最小,a+b=sum,a和b越远乘积越小,所以第一个找到的就是
  */
 public class Algorithm42FindNumbersWithSum {
 
-    public ArrayList<Integer> FindNumbersWithSum(int [] array,int sum) {
+    public ArrayList<Integer> FindNumbersWithSum(int[] array, int sum) {
 
         //方法一:两头夹击,不用考虑乘积最小,a+b=sum,a和b越远乘积越小,
         /**
@@ -24,15 +26,15 @@ public class Algorithm42FindNumbersWithSum {
         if (array == null || array.length < 2) {
             return list;
         }
-        int i=0,j=array.length-1;
-        while(i<j){
-            if(array[i]+array[j]==sum){
-            list.add(array[i]);
-            list.add(array[j]);
+        int i = 0, j = array.length - 1;
+        while (i < j) {
+            if (array[i] + array[j] == sum) {
+                list.add(array[i]);
+                list.add(array[j]);
                 return list;
-           }else if(array[i]+array[j]>sum){
+            } else if (array[i] + array[j] > sum) {
                 j--;
-            }else{
+            } else {
                 i++;
             }
         }
@@ -54,10 +56,11 @@ public class Algorithm42FindNumbersWithSum {
         }
         return arrayList;*/
     }
+
     public static void main(String[] args) {
-        int[] data = new int[]{2,4,6,8,10};
+        int[] data = new int[]{2, 4, 6, 8, 10};
         Algorithm42FindNumbersWithSum obj = new Algorithm42FindNumbersWithSum();
-        ArrayList<Integer> result = obj.FindNumbersWithSum(data,10);
+        ArrayList<Integer> result = obj.FindNumbersWithSum(data, 10);
         System.out.println(result);
     }
 }

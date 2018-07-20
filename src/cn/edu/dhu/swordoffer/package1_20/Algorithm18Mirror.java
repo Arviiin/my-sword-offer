@@ -8,11 +8,11 @@ import cn.edu.dhu.datastruct.TreeNode;
 public class Algorithm18Mirror {
 
     public void Mirror(TreeNode root) {
-        if(root == null){
-            return ;
+        if (root == null) {
+            return;
         }
         TreeNode tmp = null;
-        if (root != null){
+        if (root != null) {
             tmp = root.left;
             root.left = root.right;
             root.right = tmp;

@@ -17,21 +17,22 @@ import java.util.ArrayList;
 
 public class Algorithm19PrintMatrix {
     public static ArrayList<Integer> printMatrix(int[][] matrix) {
-        ArrayList<Integer> result = new ArrayList<> ();
-        if(matrix.length==0) return result;
-        int rowLen = matrix.length,colLen = matrix[0].length;
-        int layers = (Math.min(rowLen,colLen)-1)/2+1;//这个是层数
-        for(int i=0;i<layers;i++){
-            for(int k = i;k<colLen-i;k++) result.add(matrix[i][k]);//左至右
-            for(int j=i+1;j<rowLen-i;j++) result.add(matrix[j][colLen-i-1]);//右上至右下
-            for(int k=colLen-i-2;(k>=i)&&(rowLen-i-1!=i);k--) result.add(matrix[rowLen-i-1][k]);//右至左//这个条件我是没想到还要&&(rowLen-i-1!=i)，这个是考虑了行数小于列数的情况，比如三行六列，当到第二圈的时候，没有限制条件的话就会重复了，
-            for(int j=rowLen-i-2;(j>i)&&(colLen-i-1!=i);j--) result.add(matrix[j][i]);//左下至左上
+        ArrayList<Integer> result = new ArrayList<>();
+        if (matrix.length == 0) return result;
+        int rowLen = matrix.length, colLen = matrix[0].length;
+        int layers = (Math.min(rowLen, colLen) - 1) / 2 + 1;//这个是层数
+        for (int i = 0; i < layers; i++) {
+            for (int k = i; k < colLen - i; k++) result.add(matrix[i][k]);//左至右
+            for (int j = i + 1; j < rowLen - i; j++) result.add(matrix[j][colLen - i - 1]);//右上至右下
+            for (int k = colLen - i - 2; (k >= i) && (rowLen - i - 1 != i); k--)
+                result.add(matrix[rowLen - i - 1][k]);//右至左//这个条件我是没想到还要&&(rowLen-i-1!=i)，这个是考虑了行数小于列数的情况，比如三行六列，当到第二圈的时候，没有限制条件的话就会重复了，
+            for (int j = rowLen - i - 2; (j > i) && (colLen - i - 1 != i); j--) result.add(matrix[j][i]);//左下至左上
         }
         return result;
     }
 
     public static void main(String[] args) {
-        int[] matrix[] = new int[][]{{1, 2, 3 ,4 },{5 ,6 ,7, 8 },{9, 10 ,11, 12 },{13 ,14, 15 ,16}};
+        int[] matrix[] = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
         ArrayList<Integer> printMatrix = printMatrix(matrix);
         System.out.println(printMatrix);
     }

@@ -16,7 +16,7 @@ public class Algorithm50Duplicate {
     //    这里要特别注意~返回任意重复的一个，赋值duplication[0]
     // Return value:       true if the input is valid, and there are some duplications in the array number
     //                     otherwise false
-    public boolean duplicate(int numbers[],int length,int [] duplication) {
+    public boolean duplicate(int numbers[], int length, int[] duplication) {
 
         boolean[] k = new boolean[length];//初始化一个boolean型的数组
         for (int i = 0; i < k.length; i++) {
@@ -44,12 +44,12 @@ public class Algorithm50Duplicate {
 */
 
     public static void main(String[] args) {
-        int[] data = new int[]{2,1,3,0,4};
+        int[] data = new int[]{2, 1, 3, 0, 4};
         int length = data.length;
         int[] duplication = new int[1];
 
         Algorithm50Duplicate obj = new Algorithm50Duplicate();
-        boolean result = obj.duplicate(data,length,duplication);//[2,1,3,0,4]         "false,-1"
+        boolean result = obj.duplicate(data, length, duplication);//[2,1,3,0,4]         "false,-1"
         System.out.println(result);
     }
 }

@@ -15,10 +15,10 @@ public class Algorithm05 {
     }
 
     public int pop() {//当s2中元素全部出栈前（即s2不空时），不能再向s2中push元素。
-        if(!stack2.empty()){
+        if (!stack2.empty()) {
             return stack2.pop();
-        }else{
-            while(!stack1.empty()){
+        } else {
+            while (!stack1.empty()) {
                 stack2.push(stack1.pop());
             }
             return stack2.pop();

@@ -1,13 +1,13 @@
 package cn.edu.dhu.datastruct;
 /**
- public class TreeNode {
-    int val = 0;
-    TreeNode left = null;
-    TreeNode right = null;
-    public TreeNode(int val) {
-         this.val = val;
-    }
- }
+ * public class TreeNode {
+ * int val = 0;
+ * TreeNode left = null;
+ * TreeNode right = null;
+ * public TreeNode(int val) {
+ * this.val = val;
+ * }
+ * }
  */
 
 import java.util.LinkedList;
@@ -35,25 +35,25 @@ public class TreeNode {
      * 创建一颗二叉树
      * @param datas 实现二叉树各节点值的数组
      */
-    public static List creatBinaryTree(int[] datas){
+    public static List creatBinaryTree(int[] datas) {
         List<TreeNode> treeNodeList = new LinkedList<>();//因为LinkedList实现了List接口。此处实际上是父类引用指向子类对象，面向接口编程而不是面向实现编程
         //将数组变成TreeNode节点
-        for(int i=0;i<datas.length;i++){
+        for (int i = 0; i < datas.length; i++) {
             TreeNode treeNode = new TreeNode(datas[i]);
             treeNodeList.add(treeNode);
         }
         //给所有父节点设定子节点    //若数节点总数为n,最后一个非叶子节点是 n/2   又因为这里从0开始，所以-1
-        for(int index=0;index<treeNodeList.size()/2-1;index++){
+        for (int index = 0; index < treeNodeList.size() / 2 - 1; index++) {
             //编号为n的节点他的左子节点编号为2*n 右子节点编号为2*n+1 但是因为list从0开始编号，所以还要+1
             //这里父节点有1（2,3）,2（4,5）,3（6,7）,4（8,9） 但是最后一个父节点有可能没有右子节点 需要单独处理
-            treeNodeList.get(index).left = treeNodeList.get(index*2+1);
-            treeNodeList.get(index).right = treeNodeList.get(index*2+2);
+            treeNodeList.get(index).left = treeNodeList.get(index * 2 + 1);
+            treeNodeList.get(index).right = treeNodeList.get(index * 2 + 2);
         }
         //单独处理最后一个父节点  因为它有可能没有右子节点
-        int index = treeNodeList.size()/2-1;
-        treeNodeList.get(index).left = treeNodeList.get(index*2+1); //先设置左子节点
-        if(treeNodeList.size() % 2 == 1){ //如果有奇数个节点，最后一个父节点才有右子节点
-            treeNodeList.get(index).right = treeNodeList.get(index*2+2);
+        int index = treeNodeList.size() / 2 - 1;
+        treeNodeList.get(index).left = treeNodeList.get(index * 2 + 1); //先设置左子节点
+        if (treeNodeList.size() % 2 == 1) { //如果有奇数个节点，最后一个父节点才有右子节点
+            treeNodeList.get(index).right = treeNodeList.get(index * 2 + 2);
         }
         return treeNodeList;
     }
@@ -65,29 +65,29 @@ public class TreeNode {
      * @param datas
      * @return
      */
-    public static List creatBinaryTree(Integer[] datas){
+    public static List creatBinaryTree(Integer[] datas) {
         List<TreeNode> treeNodeList = new LinkedList<>();//因为LinkedList实现了List接口。此处实际上是父类引用指向子类对象，面向接口编程而不是面向实现编程
         //将数组变成TreeNode节点
-        for(int i=0;i<datas.length;i++){
-            if (datas[i] == null){
+        for (int i = 0; i < datas.length; i++) {
+            if (datas[i] == null) {
                 treeNodeList.add(null);
-            }else {
+            } else {
                 TreeNode treeNode = new TreeNode(datas[i]);
                 treeNodeList.add(treeNode);
             }
         }
         //给所有父节点设定子节点    //若数节点总数为n,最后一个非叶子节点是 n/2   又因为这里从0开始，所以-1
-        for(int index=0;index<treeNodeList.size()/2-1;index++){
+        for (int index = 0; index < treeNodeList.size() / 2 - 1; index++) {
             //编号为n的节点他的左子节点编号为2*n 右子节点编号为2*n+1 但是因为list从0开始编号，所以还要+1
             //这里父节点有1（2,3）,2（4,5）,3（6,7）,4（8,9） 但是最后一个父节点有可能没有右子节点 需要单独处理
-            treeNodeList.get(index).left = treeNodeList.get(index*2+1);
-            treeNodeList.get(index).right = treeNodeList.get(index*2+2);
+            treeNodeList.get(index).left = treeNodeList.get(index * 2 + 1);
+            treeNodeList.get(index).right = treeNodeList.get(index * 2 + 2);
         }
         //单独处理最后一个父节点  因为它有可能没有右子节点
-        int index = treeNodeList.size()/2-1;
-        treeNodeList.get(index).left = treeNodeList.get(index*2+1); //先设置左子节点
-        if(treeNodeList.size() % 2 == 1){ //如果有奇数个节点，最后一个父节点才有右子节点
-            treeNodeList.get(index).right = treeNodeList.get(index*2+2);
+        int index = treeNodeList.size() / 2 - 1;
+        treeNodeList.get(index).left = treeNodeList.get(index * 2 + 1); //先设置左子节点
+        if (treeNodeList.size() % 2 == 1) { //如果有奇数个节点，最后一个父节点才有右子节点
+            treeNodeList.get(index).right = treeNodeList.get(index * 2 + 2);
         }
         return treeNodeList;
     }
