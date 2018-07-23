@@ -14,7 +14,11 @@ import java.util.PriorityQueue;
  * 2、大顶堆的所有数据都小于小顶堆，这样就满足了排序要求。
  *
  *
- * 其实就是将数据流分成了两个部分，从中间切分（想象一下数据流有序时的样子），大根堆里面是小的一半，小根堆大的一半，当求中位数时只用关心中间的一个数或者两个数，这时关心的数就是堆顶的数
+ * 其实就是将数据流分成了两个部分，从中间切分（想象一下数据流有序时的样子），
+ * 大根堆里面是小的一半，小根堆大的一半，当求中位数时只用关心中间的一个数或者两个数，这时关心的数就是堆顶的数
+ *
+ * 其实也就是在进去的时候,做了划分,第一个数为奇数位进大根堆(注意不是直接进入大根堆，而是经小根堆筛选后取小根堆中最小元素进入大根堆),
+ * 第二个数为偶数位进小跟堆,以此类推,那么取的时候,若总的位数为奇数时，大顶堆堆顶就是中位数,和进去顺序一致
  */
 public class Algorithm63GetMedian {
 
@@ -40,7 +44,7 @@ public class Algorithm63GetMedian {
                 //2.筛选后的【大根堆中的最大元素】进入小根堆
                 minHeap.offer(filteredMaxNum);
         } else {//当数据总数为奇数时，新加入的元素，应当进入大根堆
-                //（注意不是直接进入大根堆，而是经小根堆筛选后取小根堆中最大元素进入大根堆）
+                //（注意不是直接进入大根堆，而是经小根堆筛选后取小根堆中最小元素进入大根堆）
                 //1.新加入的元素先入到小根堆，由小根堆筛选出堆中最小的元素
                 minHeap.offer(num);
                 int filteredMinNum = minHeap.poll();
@@ -59,6 +63,16 @@ public class Algorithm63GetMedian {
         else
             result = (minHeap.peek() + maxHeap.peek()) / 2.0;
         return result;
+    }
+
+    public static void main(String[] args) {
+        Algorithm63GetMedian obj = new Algorithm63GetMedian();
+        int[] data = {5, 2, 3, 4, 1, 6, 7, 0, 8};
+        for (int i = 0; i < data.length; i++) {
+            obj.Insert(data[i]);
+        }
+        Double resule = obj.GetMedian();
+        System.out.println(resule);
     }
 
 }
