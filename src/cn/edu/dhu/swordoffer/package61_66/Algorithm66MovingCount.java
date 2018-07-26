@@ -61,10 +61,13 @@ public class Algorithm66MovingCount {
 
     public static void main(String[] args) {
         Algorithm66MovingCount obj = new Algorithm66MovingCount();
-        int result = obj.movingCount2(18,4,5);
-        System.out.println(result);
+        //递归版
+        int result1 = obj.movingCount(18,4,5);
+        System.out.println(result1);
+        //非递归
+        int result2 = obj.movingCount2(18,4,5);
+        System.out.println(result2);
     }
-
 
     //非递归版本
     public int movingCount2(int threshold, int rows, int cols)
