@@ -1,7 +1,6 @@
-package cn.edu.dhu.other.test;
+package cn.edu.dhu.test;
 
 import org.junit.Test;
-
 import java.sql.*;
 
 public class TestJDBC {
@@ -31,6 +30,5 @@ public class TestJDBC {
         if (rs != null) rs.close();
         if (pstmt != null) pstmt.close();
         if (conn != null) conn.close();
-
     }
 }
