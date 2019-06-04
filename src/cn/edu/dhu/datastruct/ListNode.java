@@ -29,7 +29,7 @@ public class ListNode {
      *
      * @return
      */
-    public static ListNode GenNodeList() {
+    public static ListNode genNodeList() {
 
         ListNode first = null; //记录第一个节点，在后面遍历的时候使用
         ListNode node = null;  //保存当前输入的节点使用

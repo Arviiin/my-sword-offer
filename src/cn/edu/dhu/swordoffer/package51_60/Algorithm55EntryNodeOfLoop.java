@@ -33,7 +33,7 @@ public class Algorithm55EntryNodeOfLoop {
     }
     /*public static void main(String[] args) {
         Algorithm55EntryNodeOfLoop obj = new Algorithm55EntryNodeOfLoop();
-        ListNode listNode = ListNode.GenNodeList();
+        ListNode listNode = ListNode.genNodeList();
         ListNode result = obj.EntryNodeOfLoop(listNode);
         System.out.println(result);
     }*/

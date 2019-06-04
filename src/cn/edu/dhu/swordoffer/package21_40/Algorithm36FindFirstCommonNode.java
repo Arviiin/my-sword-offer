@@ -2,7 +2,6 @@ package cn.edu.dhu.swordoffer.package21_40;
 
 import cn.edu.dhu.datastruct.ListNode;
 
-import java.util.HashMap;
 import java.util.Stack;
 
 /**
@@ -84,8 +83,8 @@ public class Algorithm36FindFirstCommonNode {
 
     public static void main(String[] args) {
         //这里要创建有公共节点的两个链表
-        ListNode createCommonListNode = ListNode.GenNodeList();//公共节点部分
-        ListNode listNode1 = ListNode.GenNodeList();
+        ListNode createCommonListNode = ListNode.genNodeList();//公共节点部分
+        ListNode listNode1 = ListNode.genNodeList();
         //将公共节点接在listNode1后面
         ListNode p = listNode1;
         while (p.next != null) {
@@ -93,7 +92,7 @@ public class Algorithm36FindFirstCommonNode {
         }
         p.next = createCommonListNode;
 
-        ListNode listNode2 = ListNode.GenNodeList();
+        ListNode listNode2 = ListNode.genNodeList();
         //将公共节点接在listNode2后面
         ListNode q = listNode2;
         while (q.next != null) {

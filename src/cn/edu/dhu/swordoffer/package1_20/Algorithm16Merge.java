@@ -2,7 +2,7 @@ package cn.edu.dhu.swordoffer.package1_20;
 
 import cn.edu.dhu.datastruct.ListNode;
 
-import static cn.edu.dhu.datastruct.ListNode.GenNodeList;
+import static cn.edu.dhu.datastruct.ListNode.genNodeList;
 
 /**
  * 输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。
@@ -48,8 +48,8 @@ public class Algorithm16Merge {
     }
 
     public static void main(String[] args) {
-        ListNode list1 = GenNodeList();
-        ListNode list2 = GenNodeList();
+        ListNode list1 = genNodeList();
+        ListNode list2 = genNodeList();
         ListNode listNode = Merge(list1, list2);
         while (listNode != null) {
             System.out.println(listNode.val);

@@ -27,7 +27,7 @@ public class Algorithm56DeleteDuplication {
 
     public static void main(String[] args) {
         Algorithm56DeleteDuplication obj = new Algorithm56DeleteDuplication();
-        ListNode listNode = ListNode.GenNodeList();
+        ListNode listNode = ListNode.genNodeList();
         ListNode result = obj.deleteDuplication(listNode);
         System.out.println(result.val);
     }

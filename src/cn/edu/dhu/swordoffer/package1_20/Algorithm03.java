@@ -29,10 +29,9 @@ package cn.edu.dhu.swordoffer.package1_20;
 import cn.edu.dhu.datastruct.ListNode;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.Stack;
 
-import static cn.edu.dhu.datastruct.ListNode.GenNodeList;
+import static cn.edu.dhu.datastruct.ListNode.genNodeList;
 
 
 public class Algorithm03 {
@@ -51,7 +50,7 @@ public class Algorithm03 {
     }
 
     public static void main(String[] args) {
-        ListNode nodelist = GenNodeList();
+        ListNode nodelist = genNodeList();
         ArrayList<Integer> arrayList = printListFromTailToHead(nodelist);
         System.out.println(arrayList);
         /*System.out.println(node.val + "");

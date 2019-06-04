@@ -2,7 +2,7 @@ package cn.edu.dhu.swordoffer.package1_20;
 
 import cn.edu.dhu.datastruct.ListNode;
 
-import static cn.edu.dhu.datastruct.ListNode.GenNodeList;
+import static cn.edu.dhu.datastruct.ListNode.genNodeList;
 
 /**
  * 输入一个链表，输出该链表中倒数第k个结点。
@@ -32,7 +32,7 @@ public class Algorithm14FindKthToTail {
     }
 
     public static void main(String[] args) {
-        ListNode nodelist = GenNodeList();
+        ListNode nodelist = genNodeList();
         ListNode listNode = FindKthToTail(nodelist, 3);
         System.out.println(listNode.val);
     }
