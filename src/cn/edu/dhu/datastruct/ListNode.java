@@ -1,6 +1,5 @@
 package cn.edu.dhu.datastruct;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -35,7 +34,7 @@ public class ListNode {
         ListNode node = null;  //保存当前输入的节点使用
         Scanner sc = new Scanner(System.in);
 
-        while (!sc.hasNext("0")) {//hasNext()方法会死循环因此需要设置一个结束标志，我也不太清楚。！sc.hasNext("0").也就是说以0结束
+        while (!sc.hasNext("#")) {//hasNext()方法会死循环因此需要设置一个结束标志，我也不太清楚。！sc.hasNext("0").也就是说以#结束
             int v = sc.nextInt();
             ListNode n = new ListNode(v);
             if (first == null) {
@@ -50,14 +49,13 @@ public class ListNode {
         if (first == null) {
             System.out.println("没有数字输入");
         } else {
-            node = first;
             /*System.out.println(node.val + "");
             while(node.hasListNext()) {
                 node = node.next;
                 System.out.println(node.val + " ");
             }*/
         }
-        return node;
+        return first;
     }
 
 }
